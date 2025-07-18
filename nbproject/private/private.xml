@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/felix/OneDrive/Documents/NetBeansProjects/DriveQuest/src/com/drivequest/exception/DuplicateLicensePlateException.java</file>
+            <file>file:/C:/Users/felix/OneDrive/Documents/NetBeansProjects/DriveQuest/src/com/drivequest/exception/InvalidVehicleException.java</file>
+            <file>file:/C:/Users/felix/OneDrive/Documents/NetBeansProjects/DriveQuest/src/com/drivequest/exception/FileErrorException.java</file>
+            <file>file:/C:/Users/felix/OneDrive/Documents/NetBeansProjects/DriveQuest/src/com/drivequest/util/FileUtils.java</file>
+            <file>file:/C:/Users/felix/OneDrive/Documents/NetBeansProjects/DriveQuest/src/com/drivequest/util/ValidationUtils.java</file>
+            <file>file:/C:/Users/felix/OneDrive/Documents/NetBeansProjects/DriveQuest/src/com/drivequest/util/ThreadUtils.java</file>
+            <file>file:/C:/Users/felix/OneDrive/Documents/NetBeansProjects/DriveQuest/src/com/drivequest/model/TaxCalculator.java</file>
+            <file>file:/C:/Users/felix/OneDrive/Documents/NetBeansProjects/DriveQuest/src/com/drivequest/model/Vehicle.java</file>
+            <file>file:/C:/Users/felix/OneDrive/Documents/NetBeansProjects/DriveQuest/src/com/drivequest/model/CargoVehicle.java</file>
+            <file>file:/C:/Users/felix/OneDrive/Documents/NetBeansProjects/DriveQuest/src/com/drivequest/model/PassengerVehicle.java</file>
+            <file>file:/C:/Users/felix/OneDrive/Documents/NetBeansProjects/DriveQuest/src/com/drivequest/service/RentalCalculator.java</file>
+            <file>file:/C:/Users/felix/OneDrive/Documents/NetBeansProjects/DriveQuest/src/com/drivequest/dao/VehicleDAO.java</file>
+            <file>file:/C:/Users/felix/OneDrive/Documents/NetBeansProjects/DriveQuest/src/com/drivequest/dao/FileVehicleDAO.java</file>
+            <file>file:/C:/Users/felix/OneDrive/Documents/NetBeansProjects/DriveQuest/src/com/drivequest/service/FleetManager.java</file>
+            <file>file:/C:/Users/felix/OneDrive/Documents/NetBeansProjects/DriveQuest/src/com/drivequest/ui/MainFrame.java</file>
+            <file>file:/C:/Users/felix/OneDrive/Documents/NetBeansProjects/DriveQuest/src/com/drivequest/ui/AddVehiclePanel.java</file>
+            <file>file:/C:/Users/felix/OneDrive/Documents/NetBeansProjects/DriveQuest/src/com/drivequest/ui/VehicleListPanel.java</file>
+            <file>file:/C:/Users/felix/OneDrive/Documents/NetBeansProjects/DriveQuest/src/com/drivequest/ui/InvoicePanel.java</file>
+            <file>file:/C:/Users/felix/OneDrive/Documents/NetBeansProjects/DriveQuest/src/com/drivequest/thread/DataLoader.java</file>
+            <file>file:/C:/Users/felix/OneDrive/Documents/NetBeansProjects/DriveQuest/src/com/drivequest/thread/VehicleValidator.java</file>
+            <file>file:/C:/Users/felix/OneDrive/Documents/NetBeansProjects/DriveQuest/src/com/drivequest/util/ConfigUtils.java</file>
+            <file>file:/C:/Users/felix/OneDrive/Documents/NetBeansProjects/DriveQuest/src/com/drivequest/thread/SynchronizedCollections.java</file>
+            <file>file:/C:/Users/felix/OneDrive/Documents/NetBeansProjects/DriveQuest/src/com/drivequest/ui/StatisticsPanel.java</file>
+            <file>file:/C:/Users/felix/OneDrive/Documents/NetBeansProjects/DriveQuest/src/com/drivequest/main/DriveQuestApp.java</file>
+        </group>
+    </open-files>
+</project-private>
