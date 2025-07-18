@@ -131,32 +131,54 @@ public abstract class Vehicle implements TaxCalculator {
         return calculateSubtotal() + calculateVAT() - calculateDiscount();
     }
     
-    /**
-    * Calcula y genera el detalle de la boleta para un alquiler.
-    * 
-    * @return String con el detalle de la boleta incluyendo subtotal, IVA, descuento y total
-    */
-    @Override
-    public String calculateInvoice() {
-        double subtotal = calculateSubtotal();
-        double vat = calculateVAT();
-        double discount = calculateDiscount();
-        double total = calculateTotalAmount();
-        
-        StringBuilder invoice = new StringBuilder();
-        invoice.append("DETALLE DE BOLETA\n");
-        invoice.append("----\n");
-        invoice.append(String.format("Vehículo: %s - %s (%d)\n", getLicensePlate(), getModel(), getYear()));
-        invoice.append(String.format("Días de alquiler: %d\n", getRentalDays()));
-        invoice.append(String.format("Precio diario: $%.2f\n\n", getDailyPrice()));
-        invoice.append(String.format("Subtotal: $%.2f\n", subtotal));
-        invoice.append(String.format("IVA (%.0f%%): $%.2f\n", VAT * 100, vat));
-        invoice.append(String.format("Descuento: $%.2f\n", discount));
-        invoice.append("----\n");
-        invoice.append(String.format("TOTAL A PAGAR: $%.2f", total));
-        
-        return invoice.toString();
-    }
+     /**
+     * Calcula y genera el detalle de la boleta para un alquiler.
+     * 
+     * @return String con el detalle de la boleta incluyendo subtotal, IVA, descuento y total
+     */
+     @Override
+     public String calculateInvoice() {
+     double subtotal = calculateSubtotal();
+     double vat = calculateVAT();
+     double discount = calculateDiscount();
+     double total = calculateTotalAmount();
+    
+     // Determinar el porcentaje de descuento según el tipo de vehículo
+     double discountPercentage = 0.0;
+     String vehicleType = "";
+    
+     if (this instanceof CargoVehicle) {
+        discountPercentage = CARGO_DISCOUNT;
+        vehicleType = "Vehículo de Carga";
+     } else if (this instanceof PassengerVehicle) {
+        discountPercentage = PASSENGER_DISCOUNT;
+        vehicleType = "Vehículo de Pasajeros";
+     }
+    
+     StringBuilder invoice = new StringBuilder();
+     invoice.append("DETALLE DE BOLETA\n");
+     invoice.append("----\n");
+     invoice.append(String.format("Vehículo: %s - %s (%d)\n", getLicensePlate(), getModel(), getYear()));
+     invoice.append(String.format("Tipo: %s\n", vehicleType));
+     invoice.append(String.format("Días de alquiler: %d\n", getRentalDays()));
+     invoice.append(String.format("Precio diario: $%.2f\n\n", getDailyPrice()));
+     invoice.append(String.format("Subtotal: $%.2f\n", subtotal));
+     invoice.append(String.format("IVA (%.0f%%): $%.2f\n", VAT * 100, vat));
+     invoice.append(String.format("Descuento (%.0f%%): $%.2f\n", discountPercentage * 100, discount));
+    
+     // Si hay bonificaciones adicionales (para alquileres largos o vehículos de gran capacidad)
+     double basicDiscount = subtotal * discountPercentage;
+     double additionalDiscount = discount - basicDiscount;
+    
+     if (additionalDiscount > 0) {
+        invoice.append(String.format("Bonificación adicional: $%.2f\n", additionalDiscount));
+     }
+    
+     invoice.append("----\n");
+     invoice.append(String.format("TOTAL A PAGAR: $%.2f", total));
+    
+     return invoice.toString();
+     }
     
     // Getters y Setters
     
